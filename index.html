@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Autobiografía Dinámica</title>
+    <!-- Librería de animaciones al deslizar (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Estilos generales en tonos morados oscuros y detalles dorados complementarios */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d0614; /* Morado noche muy profundo */
+            color: #e2d9f3; /* Texto en lila suave legible */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Encabezado dinámico con degradado morado */
+        header {
+            background: linear-gradient(135deg, #1b0c2e, #2d124d);
+            color: #ffffff;
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 2px solid #5b21b6;
+            animation: fadeInDown 1.2s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #facc15; /* Dorado brillante (Complementario perfecto del morado) */
+            text-shadow: 0 0 15px rgba(250, 204, 21, 0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #c4b5fd;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Tarjetas de contenido estilo moderno */
+        .card {
+            background: #180a28; /* Morado oscuro contenedor */
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            border: 1px solid #3b1568;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #facc15;
+        }
+
+        /* Títulos en color complementario (dorado/amarillo) */
+        h2 {
+            color: #facc15;
+            border-bottom: 2px solid #3b1568;
+            padding-bottom: 8px;
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+
+        /* Lista de intereses dinámica */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            background: #250e3f;
+            margin-bottom: 12px;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 4px solid #facc15;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        ul li:hover {
+            transform: translateX(8px);
+            background: #321354;
+        }
+
+        /* Cuadrícula de la galería de imágenes */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 12px;
+            border: 2px solid #3b1568;
+            position: relative;
+            background: #11051f;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        /* Zoom dinámico al pasar el mouse por las fotos */
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #c4b5fd;
+            background: #180a28;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #8b5cf6;
+            font-size: 0.95em;
+            border-top: 1px solid #250e3f;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MiAutobiografía</h1>
+        <p>Intento de pagina</p>
+    </header>
+
+    <div class="container">
+
+        <!-- SECCIÓN 1: SOBRE MÍ E INTERESES -->
+        <div class="card" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Sobre mí</h2>
+            <p>Soy una persona reservada, tranquila, empática y reflexiva. Valoro la sinceridad, la libertad y la tranquilidad, y prefiero las relaciones genuinas antes que las superficiales. Me gusta aprender, cuestionarme y comprender mejor el mundo y a mí mismo. Busco mejorar constantemente, desarrollar mis capacidades y superar mis propias limitaciones. Tengo metas claras: terminar mis estudios, adquirir nuevos conocimientos, alcanzar independencia y construir un futuro estable. Aunque a veces tengo inseguridades y dudas, procuro mantenerme fiel a mis valores y tomar mis propias decisiones. No busco lujos ni la aprobación de los demás, sino una vida tranquila, con propósito y en la que pueda sentirme orgulloso de quien soy, sin perder mi esencia.</p>
+            
+            <h2 style="margin-top: 35px;">Mis Intereses y Pasatiempos</h2>
+            <ul>
+                <li>Jugar videojuegos, especialmente RPG y juegos de estrategia.</li>
+                <li>Practicar inglés y aprender vocabulario nuevo.[ns ingles lk]</li>
+                <li>Escuchar música y reflexionar sobre la vida.</li>
+                <li>Aprender cosas nuevas por curiosidad.</li>
+                <li>Tomar fotografías y experimentar con la edición de imágenes.</li>
+                <li>Explorar temas de desarrollo personal y autoconocimiento.</li>
+                <li>Y principalmente, Disfrutar de mi tiempo a solas y de la tranquilidad.</li>
+            </ul>
+        </div>
+
+        <!-- SECCIÓN 2: GALERÍA DE IMÁGENES DE EJEMPLO -->
+        <div class="card" data-aos="fade-up" data-aos-duration="1200">
+            <h2>Momentos simples q he tomado pq ci</h2>
+            <p>Elementos visuales que tienen un significado en mi vida</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="Esc.jpg.jpg" alt="Estaba en la escuela">
+                    <div class="gallery-caption">Estaba en la escuela con una amiga, mire el cielo y me gusto.</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Ami.jpg.jpg" alt="Estaba en la casa de un amigo jugando un juegazo[Lo jugaria de nuevo]">
+                    <div class="gallery-caption">"Estaba en la casa de un amigo jugando un juegazo[Lo jugaria de nuevo]</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Ss.jpg.jpg" alt="Literalmente fue hace 1 semana aprox">
+                    <div class="gallery-caption">"Literalmente fue hace 1 semana aprox[6:10 AM]</div>
+                </div>
+            </div>
+            <p style="font-size: 0.85em; color: #a78bfa; margin-top: 15px;">* Nota: Agradecido por todos estos momentos simples, pero genuinos.</p>
+        </div>
+
+        <!-- SECCIÓN 3: AGRADECIMIENTOS -->
+        <div class="card" data-aos="fade-up" data-aos-duration="1400">
+            <h2>Agradecimientos</h2>
+            <p>Quiero expresar mi más sincero agradecimiento a todas las personas que he conocido a lo largo de mi vida. A quienes me han acompañado en el camino y han dejado una huella valiosa en mí.</p>
+            <p>Cada interacción, conversación, momento difícil superado y vivencia compartida ha contribuido a formar la persona que soy hoy. Gracias por formar parte de esta historia.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Diseñado con 5 horas de tutoriales de IA | 2026</p>
+    </footer>
+
+    <!-- Scripts necesarios para las animaciones flotantes al hacer scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
